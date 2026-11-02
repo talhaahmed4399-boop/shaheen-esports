@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Shaheen Esports — Competitive gaming, tournaments and esports community."
+    >
+
+    <title>Shaheen Esports | Official Platform</title>
+
+    <!-- Separate CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Supabase will be configured in a later step -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="site-shell">
+
+        <!-- Header -->
+        <header class="site-header">
+            <a class="brand" href="#" aria-label="Shaheen Esports home">
+                <span class="brand-mark" aria-hidden="true">S</span>
+                <span class="brand-name">
+                    <strong>SHAHEEN</strong>
+                    <span>ESPORTS</span>
+                </span>
+            </a>
+
+            <span class="header-status">
+                <span class="status-dot"></span>
+                OFFICIAL GAMING PLATFORM
+            </span>
+        </header>
+
+        <main>
+            <!-- LOGIN / REGISTER SCREEN -->
+            <section
+                id="auth-screen"
+                class="screen auth-screen"
+                aria-labelledby="auth-title"
+            >
+                <div class="auth-intro">
+                    <p class="eyebrow">
+                        <span class="accent-line"></span>
+                        COMPETE WITHOUT LIMITS
+                    </p>
+
+                    <h1 id="auth-title">
+                        YOUR NEXT<br>
+                        <span>VICTORY</span><br>
+                        STARTS HERE.
+                    </h1>
+
+                    <p class="intro-description">
+                        Enter the world of competitive gaming.
+                        Join Shaheen Esports and prepare for battle.
+                    </p>
+
+                    <div class="platform-note">
+                        <span class="platform-note-icon" aria-hidden="true">✦</span>
+                        BUILT FOR COMPETITORS
+                    </div>
+                </div>
+
+                <div class="auth-card">
+                    <div class="card-heading">
+                        <p class="eyebrow">PLAYER ACCESS</p>
+                        <h2 id="auth-card-title">Welcome back.</h2>
+                        <p id="auth-card-description">
+                            Sign in to access your esports platform.
+                        </p>
+                    </div>
+
+                    <div class="auth-tabs" role="tablist" aria-label="Account options">
+                        <button
+                            type="button"
+                            class="auth-tab active"
+                            id="login-tab"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="auth-form"
+                            data-auth-mode="login"
+                        >
+                            LOGIN
+                        </button>
+
+                        <button
+                            type="button"
+                            class="auth-tab"
+                            id="register-tab"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="auth-form"
+                            data-auth-mode="register"
+                        >
+                            REGISTER
+                        </button>
+                    </div>
+
+                    <form id="auth-form" novalidate>
+                        <div class="form-field" id="username-field" hidden>
+                            <label for="username">Player name</label>
+                            <input
+                                id="username"
+                                name="username"
+                                type="text"
+                                placeholder="Enter your player name"
+                                autocomplete="nickname"
+                                maxlength="40"
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email address</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="password">Password</label>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                minlength="8"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field" id="confirm-password-field" hidden>
+                            <label for="confirm-password">Confirm password</label>
+                            <input
+                                id="confirm-password"
+                                name="confirmPassword"
+                                type="password"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                minlength="8"
+                            >
+                        </div>
+
+                        <p
+                            id="auth-message"
+                            class="form-message"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                            id="auth-submit"
+                        >
+                            <span id="auth-submit-label">SIGN IN</span>
+                            <span aria-hidden="true">↗</span>
+                        </button>
+                    </form>
+
+                    <p class="security-note">
+                        <span aria-hidden="true">◆</span>
+                        Your account access will be protected by secure authentication.
+                    </p>
+                </div>
+            </section>
+
+            <!-- GAME SELECTION: hidden until authentication succeeds -->
+            <section
+                id="game-screen"
+                class="screen game-screen"
+                aria-labelledby="game-title"
+                hidden
+            >
+                <div class="game-heading">
+                    <p class="eyebrow">
+                        <span class="accent-line"></span>
+                        SHAHEEN ESPORTS / GAME HUB
+                    </p>
+
+                    <h1 id="game-title">
+                        CHOOSE YOUR<br>
+                        <span>BATTLEFIELD.</span>
+                    </h1>
+
+                    <p class="intro-description">
+                        Select an available game to continue.
+                    </p>
+                </div>
+
+                <div class="game-grid">
+                    <!-- PUBG Mobile is the only available game -->
+                    <article class="game-card game-card-available">
+                        <div class="game-card-top">
+                            <span class="game-category">BATTLE ROYALE</span>
+                            <span class="game-status available">
+                                <span class="status-dot"></span>
+                                AVAILABLE
+                            </span>
+                        </div>
+
+                        <div class="game-art pubg-art" aria-hidden="true">
+                            <span class="game-art-label">PUBG</span>
+                            <span class="game-art-subtitle">MOBILE</span>
+                        </div>
+
+                        <div class="game-card-content">
+                            <h2>PUBG MOBILE</h2>
+                            <p>
+                                Enter the battlefield and compete
+                                in the world of tactical survival.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="primary-button game-select-button"
+                                data-game="pubg-mobile"
+                            >
+                                SELECT GAME
+                                <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Coming soon: not selectable -->
+                    <article class="game-card game-card-disabled">
+                        <div class="game-card-top">
+                            <span class="game-category">BATTLE ROYALE</span>
+                            <span class="game-status coming-soon">COMING SOON</span>
+                        </div>
+
+                        <div class="game-art freefire-art" aria-hidden="true">
+                            <span class="game-art-label">FREE FIRE</span>
+                        </div>
+
+                        <div class="game-card-content">
+                            <h2>FREE FIRE</h2>
+                            <p>
+                                This game will become available
+                                when its section launches.
+                            </p>
+
+                            <button type="button" class="secondary-button" disabled>
+                                COMING SOON
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Coming soon: not selectable -->
+                    <article class="game-card game-card-disabled">
+                        <div class="game-card-top">
+                            <span class="game-category">TACTICAL ACTION</span>
+                            <span class="game-status coming-soon">COMING SOON</span>
+                        </div>
+
+                        <div class="game-art cod-art" aria-hidden="true">
+                            <span class="game-art-label">CALL OF DUTY</span>
+                        </div>
+
+                        <div class="game-card-content">
+                            <h2>CALL OF DUTY</h2>
+                            <p>
+                                Competitive features for this game
+                                are planned for a future release.
+                            </p>
+
+                            <button type="button" class="secondary-button" disabled>
+                                COMING SOON
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <button type="button" id="logout-button" class="text-button">
+                    SIGN OUT
+                </button>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <span>© <span id="current-year">2026</span> SHAHEEN ESPORTS</span>
+            <span>PLAY WITH PURPOSE. COMPETE WITH HONOUR.</span>
+        </footer>
+
+    </div>
+</body>
+</html>
